@@ -1,4 +1,17 @@
 #emojiText{
     color: green;
     position: relative;
+    font-size: 500%;
+    font-family: 'Courier New', Courier, monospace;
 }  
+
+#emojiText {
+    animation: blinker 2s linear infinite;
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+  
