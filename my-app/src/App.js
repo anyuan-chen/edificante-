@@ -1,23 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import Emojibox from './Components/emojibox'
+import emojiList from './emojis'
 
 function App() {
+  const emoji = require("./emojis.js");
+  var random = Math.floor(Math.random() * emojiList.length);
+  var selectedEmoji = emojiList[random].text;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id = "container">
+          <Emojibox id = "emoji" text={selectedEmoji}></Emojibox>
     </div>
   );
 }
